@@ -1,3 +1,3 @@
-const makeJS = require("./controllers/generateJS");
+const makeJS = require("./controllers/generate-js");
 
 makeJS("test-project");
