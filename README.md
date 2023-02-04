@@ -17,8 +17,15 @@ A command line application to setup a new project.
 - Performs an inital commit after file setup
 - Pushes initial commit to GitHub (eg. git push -u origin main)
 
-### Project Extras
+### Accepted Arguements
 
-- Add ability to make a global installer so the generator can be run from anywhere on the file system
-  // eg. generate [project name][github http]
-- Add the ability to setup a python project based on the arguments
+--help Displays the list of supported commands
+
+-n=<project-name> REQUIRED Sets the name of the new project
+
+-r=<remote-url> (Optional) Sets a remote URL & pushes to the remote
+
+#### Project Extras For The Future
+
+- Add the ability to setup a python project based on CL args.
+- Add the ability to setup a new typescript project based on CL args.

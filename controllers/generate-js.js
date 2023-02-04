@@ -4,7 +4,7 @@ const bashCommand = require("../utils/execute-bash");
 const readFile = require("../utils/read-file");
 const pushToRemote = require("../utils/push-to-remote");
 
-function projectGenerator(projectName, githubURL) {
+function jsGenerator(projectName, remoteURL) {
   return makeFolder(projectName)
     .then((res) => {
       console.log("✅ Project Folder Created! \n");
@@ -42,7 +42,7 @@ function projectGenerator(projectName, githubURL) {
       return bashCommand(`cd ${projectName}; git init`);
     })
     .then(() => {
-      console.log("✅ Initialised Project As A git Repo \n");
+      console.log("✅ Initialised Project As A Git Repo \n");
       console.log("🔨 Initialising directory with npm...");
       return bashCommand(`cd ${projectName}; npm init -y`);
     })
@@ -66,8 +66,8 @@ function projectGenerator(projectName, githubURL) {
     })
     .then(() => {
       console.log("✅ test script set as Jest \n");
-      if (githubURL) {
-        return pushToRemote(projectName, githubURL);
+      if (remoteURL) {
+        return pushToRemote(projectName, remoteURL);
       }
     })
     .then(() => {
@@ -79,4 +79,4 @@ function projectGenerator(projectName, githubURL) {
     });
 }
 
-module.exports = projectGenerator;
+module.exports = jsGenerator;
