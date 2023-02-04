@@ -17,7 +17,7 @@ A command line application to setup a new project.
 - Performs an inital commit after file setup
 - Pushes initial commit to GitHub (eg. git push -u origin main)
 
-### Accepted Arguements
+## Accepted Arguements
 
 --help Displays the list of supported commands
 
@@ -25,7 +25,18 @@ A command line application to setup a new project.
 
 -r=<remote-url> (Optional) Sets a remote URL & pushes to the remote
 
-#### Project Extras For The Future
+## Global Installation Instructions
+
+- Clone the repo to your desired installation destination
+- Get the full filepath to this location
+- Open .zshrc with your chosen text editor
+- Add the following lines into your .zshrc file to alias this to the 'generate' command
+
+`function generate () {
+    node <replace with full filepath to index.js> "$1" "$2"
+} `
+
+## Project Extras For The Future
 
 - Add the ability to setup a python project based on CL args.
 - Add the ability to setup a new typescript project based on CL args.
