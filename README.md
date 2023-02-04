@@ -40,3 +40,4 @@ A command line application to setup a new project.
 
 - Add the ability to setup a python project based on CL args.
 - Add the ability to setup a new typescript project based on CL args.
+- Add a function to automate the global install
